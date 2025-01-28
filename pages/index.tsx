@@ -1,7 +1,7 @@
 import { usePrivy } from '@privy-io/react-auth'
 
 export default function Home() {
-  const { login, logout, ready, authenticated } = usePrivy()
+  const { login, logout, authenticated } = usePrivy()
 
   return (
     <div className="min-h-screen bg-gray-50 p-8">
