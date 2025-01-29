@@ -7,8 +7,16 @@ function MyApp({ Component, pageProps }: AppProps) {
       appId={process.env.NEXT_PUBLIC_PRIVY_APP_ID!}
       config={{
         loginMethods: ['twitter', 'google'],
+        // Nouvelle syntaxe pour les OAuth callbacks
+        socialLoginUrls: {
+          google: 'https://wallet-rescue-aoen.vercel.app/api/auth/callback/google',
+          twitter: 'https://wallet-rescue-aoen.vercel.app/api/auth/callback/twitter'
+        },
+        embeddedWallets: {
+          createOnLogin: 'users-without-wallets'
+        },
         appearance: {
-          theme: 'light',
+          theme: 'dark',
           accentColor: '#4A90E2'
         }
       }}
