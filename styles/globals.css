@@ -3,8 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    @apply bg-gray-900 text-white;
+@layer utilities {
+  .bg-gradient-dark {
+    @apply bg-gradient-to-br from-gray-900 to-blue-900;
   }
 }
